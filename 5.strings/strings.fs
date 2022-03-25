@@ -1,9 +1,8 @@
 open System
 // // 17.1
-let rec pow (s, n) = match (s, n) with
- | s, n when n > 1 -> s + pow (s, n - 1)
- | _ -> s
-
+let rec pow (s:string, n:int) = match (s, n) with
+ | s, n when n > 0 -> s + pow (s, n - 1)
+ | _ -> ""
 
 // 17.2
 let isIthChar (s:string, n, c) = match c with
