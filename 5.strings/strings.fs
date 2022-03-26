@@ -5,10 +5,9 @@ let rec pow (s:string, n:int) = match (s, n) with
  | _ -> ""
 
 // 17.2
-let isIthChar (s:string, n, c) = match c with
+let isIthChar (s, n, c) = match c with
  | c when c = s.[n] -> true
  | _ -> false
-
 
 // 17.3
 let rec occFromIth = function
