@@ -5,8 +5,8 @@ let rec pow (s:string, n:int) = match (s, n) with
  | _ -> ""
 
 // 17.2
-let isIthChar (s, n, c) = match c with
- | c when c = s.[n] -> true
+let isIthChar (s:string, n, c) = match c with
+ | c when n > 0 && n < String.length s && c = s.[n] -> true
  | _ -> false
 
 // 17.3
