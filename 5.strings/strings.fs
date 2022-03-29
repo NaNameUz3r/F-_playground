@@ -17,3 +17,12 @@ let rec occFromIth = function
         occFromIth (s, n + 1, c) + 1
     else
         occFromIth (s, n + 1, c)
+
+
+let johnDoe = function
+| "age" | "vozrast"         -> "69"
+| "hobby" | "che delart"    -> "story telling"
+| "diagnosis" | "bolyachka" -> "ASPD"
+| _                         -> "no data"
+
+printfn "%s" (johnDoe "agea")
