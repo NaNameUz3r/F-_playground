@@ -1,8 +1,10 @@
 // 20.3.1
 let vat n x = (x * float(n) / 100.0) + x
 
+printfn "%f" (vat 5 100)
+
 // 20.3.2
-let unvat n x = x * (float(n) / float(100 + n))
+let unvat n x = x * (float(100) / float(100 + n))
 
 // 20.3.3
 let rec min f = 
