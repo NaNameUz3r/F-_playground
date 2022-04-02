@@ -1,5 +1,5 @@
 // 20.3.1
-let vat n x = (x * float(n) / 100.0)) + x
+let vat n x = (x * float(n) / 100.0) + x
 
 // 20.3.2
 let unvat n x = x * (float(n) / float(100 + n))
@@ -10,3 +10,5 @@ let rec min f =
         if (f n) = 0 then n
         else iterMin(n + 1)
     iterMin 1 
+
+
