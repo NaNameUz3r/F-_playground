@@ -66,7 +66,7 @@ let (.-) x y =
 let (.*) x y = 
     let (a, b) = x
     let (c, d) = y
-    (a * c - b * d, b * c - a * d)
+    (a * c - b * d, b * c + a * d)
 
 let (./) x y = 
     let (a, b) = x
