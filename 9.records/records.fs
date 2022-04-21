@@ -6,9 +6,7 @@ let (.>.) x y =
     let y_time = (y.hours, y.minutes)
 
     let x_majority = x_time > y_time
-    printfn "%b" x_majority
-    printfn "%s" y.f
-    if y.f = "PM" then
+    if x.f = "AM" && y.f = "PM" then
         not x_majority
     else
         x_majority
