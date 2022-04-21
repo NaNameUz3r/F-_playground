@@ -1,10 +1,15 @@
 type TimeOfDay = { hours : int;  minutes : int; f :string}
 
-let (.>.) x y = x > y 
 
-// let m = { hours = 8; minutes = 30; f = "AM" }
-// let e = { hours = 9; minutes = 45; f = "PM" }
+let (.>.) x y = 
+    let x_time = (x.hours, x.minutes)
+    let y_time = (y.hours, y.minutes)
 
-// printfn "%b" (e .>. m = true)
-// printfn "%b" (m .>. m = false)
+    let x_majority = x_time > y_time
+    printfn "%b" x_majority
+    printfn "%s" y.f
+    if y.f = "PM" then
+        not x_majority
+    else
+        x_majority
 
