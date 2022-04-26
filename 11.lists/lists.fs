@@ -21,7 +21,6 @@ let evenn n =
      | 0 -> []
      | _ -> x * 2 :: generate_evens (n-1, x+1)
     generate_evens (n, 1)
-
-printfn "%A" (evenn 5)  
+ 
 
 
