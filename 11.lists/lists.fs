@@ -19,8 +19,6 @@ let rec dnto n  =
 let evenn n = 
     let rec generate_evens (n, x) = match n with
      | 0 -> []
-     | _ -> x * 2 :: generate_evens (n-1, x+1)
-    generate_evens (n, 1)
+     | _ -> (x * 2) :: generate_evens (n-1, x+1)
+    generate_evens (n, 0)
  
-
-
