@@ -27,14 +27,14 @@ let rec multiplicity x xs = match xs with
 
 // 39.4
 let rec split = function
- | [x; y] -> ([x], [y])
+ | [] -> [], []
+ | [x] -> [x], []
  | x::y::n -> 
-            let (odd, even) = split n
-            (x::odd, y::even)
- | _ -> failwith "Input list should have even length"
-
+   let (odd, even) = split n
+   (x::odd, y::even)
 
 // 39.5
 let rec zip (xs1,xs2)= match (xs1,xs2) with
  | ([],[]) -> []
  | (xhead::xtail, yhead::ytail) -> (xhead,yhead)::zip(xtail,ytail)
+ | _ -> failwith "Both of input lists should have even lengths"
