@@ -1,8 +1,13 @@
 // 39.1
-let rmodd l = 
-    let list_length = List.length l
-    let odd_elements = [ for i in 1 .. 2 .. list_length -> l.Item(i)]
-    odd_elements  
+// let rmodd l = 
+//     let list_length = List.length l
+//     let odd_elements = [ for i in 1 .. 2 .. list_length -> l.Item(i)]
+//     odd_elements  
+
+let rec rmodd = function
+ | [] -> []
+ | [n] -> []
+ | head::n2::tail -> n2::rmodd(tail)
 
 // 39.2
 // let del_even l = 
