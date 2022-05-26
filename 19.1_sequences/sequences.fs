@@ -10,7 +10,7 @@ let fac_seq =
         | 1 -> 1
         | _ -> n * findFactorial(n-1)
 
-    Seq.initInfinite factorial
+    Seq.initInfinite findFactorial
 
 // 49.5.3
 let seq_seq = 
