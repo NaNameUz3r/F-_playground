@@ -1,6 +1,5 @@
 // 49.5.1
 let even_seq = Seq.initInfinite (fun i  -> i * 2 + 2)
-printfn "%A" even_seq
 
 // 49.5.2
 let fac_seq = 
