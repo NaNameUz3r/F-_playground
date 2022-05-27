@@ -5,8 +5,9 @@ let fac_seq =
         | 0 -> 1
         | 1 -> 1
         | _ -> n * findFactorial(n-1)
-    let mutable i = 0
+    
     let buildedSeq = seq {
+        let mutable i = 0
         while true do 
             yield findFactorial i
             i <- i + 1
